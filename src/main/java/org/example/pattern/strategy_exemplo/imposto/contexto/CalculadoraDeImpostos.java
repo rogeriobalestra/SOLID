@@ -5,18 +5,18 @@ import org.example.pattern.strategy_exemplo.imposto.strategy.ImpostoSrategy;
 
 public class CalculadoraDeImpostos {
 
-    private ImpostoSrategy srategy;
+    private ImpostoSrategy strategy;
 
     public void definirStrategy(ImpostoSrategy srategy) {
-        this.srategy = srategy;
+        this.strategy = srategy;
     }
 
     public double calcular(double valor){
 
-        if(srategy == null) {
+        if(strategy == null) {
             throw new IllegalStateException("Nenhuma estratégia de imposto definica");
         }
 
-        return srategy.calcular(valor);
+        return strategy.calcular(valor);
     }
 }
